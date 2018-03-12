@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { BinanceService } from './services/binance.service';
-import { TickerChange24Hr } from './shared/binance-api-response';
+import { BinanceService } from '../binance/services/binance.service';
+import { TickerChange24Hr } from '../shared/binance-api-response';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -17,6 +17,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.tickerChange$ = this.binanceService.get24hrChange('XRPBTC');
+    //this.tickerChange$ = this.binanceService.get24hrChange('XRPBTC');
+    this.binanceService.test();
   }
 }

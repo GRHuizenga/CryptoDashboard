@@ -5,9 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-
-// Services
-import { BinanceService } from './services/binance.service';
+import { BinanceModule } from '../binance/binance.module';
 
 @NgModule({
   declarations: [
@@ -17,8 +15,9 @@ import { BinanceService } from './services/binance.service';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    BinanceModule.forRoot(),
   ],
-  providers: [BinanceService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,6 +1,10 @@
-<div *ngIf="tickerChange$ | async as ticker">
+<div *ngIf="tickerChange$ | async as ticker; else loading">
   <h2>XRP/BTC 24 change:</h2>
   <p>{{ticker.priceChangePercent}}%</p>
 </div>
+
+<ng-template #loading>
+  Loading...
+</ng-template>
 
 <router-outlet></router-outlet>

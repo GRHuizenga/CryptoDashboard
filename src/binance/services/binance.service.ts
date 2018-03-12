@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../environments/environment';
-import { TickerChange24Hr } from '../shared/binance-api-response';
+import { TickerChange24Hr } from '../../shared/binance-api-response';
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 
 const httpOptions = {
   headers: new HttpHeaders({
-    'X-MBX-APIKEY': environment.binanceApiKey,
+    'X-MBX-APIKEY': '' //environment.binanceApiKey,
   })
 };
 
