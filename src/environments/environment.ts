@@ -6,6 +6,5 @@
 export const environment = {
   production: false,
   binanceBaseUrl: 'https://api.binance.com',
-  sdjkfhsdfk
   ticker24hChange: 'api/v1/ticker/24hr',
 };
