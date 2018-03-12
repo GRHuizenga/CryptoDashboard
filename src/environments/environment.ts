@@ -6,6 +6,7 @@
 export const environment = {
   production: false,
   binanceBaseUrl: 'https://api.binance.com',
-  
+  binanceApiKey: 'MwSWZQaou8XD3rxluLvDG51GaA9UUHgWiydHDvNtV9cGSYa302AokkGGuZGGWpCm',
+  binanceApiSecret: 'NbuUab9aRo96gU7L6Nw5PsrxxI3ypJ6RLc43lL5B8Qz1qODKayqSezFEiu7glKDS',
   ticker24hChange: 'api/v1/ticker/24hr',
 };
