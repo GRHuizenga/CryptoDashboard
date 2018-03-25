@@ -1,6 +1,16 @@
-<div *ngIf="tickerChange$ | async as ticker; else loading">
-  <h2>XRP/BTC 24 change:</h2>
-  <p>{{ticker.priceChangePercent}}%</p>
+<div *ngIf="candleSticks$ | async as klines; else loading">
+  <h2>XRP/BTC Klines:</h2>
+    <div *ngFor="let kline of klines">
+      <p>Open time: {{getTime(kline.openTime)}}</p>
+      <p>Close time: {{getTime(kline.closeTime)}}</p>
+      <br/>
+      <p>Open price: {{kline.open}}</p>
+      <p>Close price: {{kline.close}}</p>
+      <p>High price: {{kline.high}}</p>
+      <p>Low price: {{kline.low}}</p>
+      <br/>
+      <p>Volume: {{kline.volume}}</p>
+    </div>
 </div>
 
 <ng-template #loading>
